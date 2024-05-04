@@ -27,7 +27,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
     {
-        "python-mode/python-mode",
         "tpope/vim-fugitive",
         {
             "folke/tokyonight.nvim",
