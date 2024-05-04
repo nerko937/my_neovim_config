@@ -2,8 +2,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.ts = 4
-vim.opt.sw = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.opt.mouse = ''
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.guicursor = "n-v-i-c:block-nCursor"
@@ -65,12 +67,12 @@ require("lazy").setup({
 		config = function()
 			require('lspconfig').pylsp.setup{
 				settings = {
-    				pylsp = {
-      					plugins = {
+					pylsp = {
+	  					plugins = {
 							pycodestyle = { ignore = {'W391', 'W503'}, maxLineLength = 120 }
 						}
-   					}
-  				}
+					}
+ 				}
 			}
 		end
 	},
