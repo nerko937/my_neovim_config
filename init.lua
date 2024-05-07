@@ -9,6 +9,7 @@ vim.o.shiftwidth = 4
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = "n-v-i-c:block-nCursor"
+vim.opt.scrolloff = 10
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
