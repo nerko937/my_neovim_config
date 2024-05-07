@@ -1,7 +1,7 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.6",
+        tag = "0.1.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "BurntSushi/ripgrep",
@@ -11,6 +11,7 @@ return {
         config = function()
             local telescope = require "telescope"
             telescope.setup {
+                defaults = { layout_strategy='vertical' },
                 extensions = {
                     fzf = {
                         fuzzy = true, -- false will only do exact matching
@@ -31,6 +32,8 @@ return {
             vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
             vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
             vim.keymap.set("n", "<leader>fh", ":Telescope file_history history<CR>", {}) --<C-r> on selected change to restore
+            vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+            vim.keymap.set("n", "<leader>fr", builtin.lsp_references, {})
         end
     },
 }
