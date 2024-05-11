@@ -43,4 +43,5 @@ return {
             }
         end
     },
+    { 'RRethy/vim-illuminate' },
 }
