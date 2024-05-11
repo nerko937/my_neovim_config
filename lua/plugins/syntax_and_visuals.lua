@@ -1,10 +1,10 @@
 return {
     {
-        "folke/tokyonight.nvim",
-        lazy = false,
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
         config = function()
-            vim.cmd([[colorscheme tokyonight-night]])
+            vim.cmd([[colorscheme catppuccin-mocha]])
         end
     },
     {
@@ -12,7 +12,7 @@ return {
         dependencies = {"nvim-tree/nvim-web-devicons"},
         config = function()
             require("lualine").setup {
-                options = {theme = "tokyonight"}
+                options = {theme = "catppuccin"},
             }
         end
     },
